@@ -173,16 +173,16 @@ class Game:
                         pause = False
                     if not pause:
 
-                        if event.key == K_UP:
+                        if event.key == K_UP and self.snake.direction != "down":
                             self.snake.move_up()
 
-                        if event.key == K_DOWN:
+                        if event.key == K_DOWN and self.snake.direction != "up":
                             self.snake.move_down()
 
-                        if event.key == K_RIGHT:
+                        if event.key == K_RIGHT and self.snake.direction != "left":
                             self.snake.move_right()
 
-                        if event.key == K_LEFT:
+                        if event.key == K_LEFT and self.snake.direction != "right":
                             self.snake.move_left()
 
                 elif event.type == QUIT:
